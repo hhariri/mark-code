@@ -1,0 +1,15 @@
+out/*
+~$*
+.idea/workspace.xml
+.DS_Store/*
+.DS_Store
+lib/kotlin-runtime.jar
+build/
+classes/
+.gradle/
+gradle.properties
+slack.log
+
+lib/
+.idea/
+**.iml

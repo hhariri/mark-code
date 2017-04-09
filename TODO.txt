@@ -1,0 +1,5 @@
+- Clean-up code
+- Add tests where possible
+- Abstract AsciiDoc
+- Provide support for Markdown
+- Add App plugin
