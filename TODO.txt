@@ -3,3 +3,5 @@
 - Abstract AsciiDoc
 - Provide support for Markdown
 - Add App plugin
+- Add a README (with actual contents)
+
