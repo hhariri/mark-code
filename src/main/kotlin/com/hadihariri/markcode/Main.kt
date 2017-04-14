@@ -1,7 +1,7 @@
 package com.hadihariri.markcode
 
-import org.jetbrains.kotlinBook.codegen.Chapter
-import org.jetbrains.kotlinBook.codegen.writeVerifyAllSamples
+import com.hadihariri.markcode.Chapter
+import com.hadihariri.markcode.writeVerifyAllSamples
 import java.io.File
 
 

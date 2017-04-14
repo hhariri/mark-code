@@ -6,8 +6,7 @@ import org.jetbrains.spek.api.dsl.on
 import kotlin.test.assertEquals
 import kotlin.test.assertNotEquals
 
-class SyntheticTests: Spek({
-
+class SyntheticsTests : Spek({
     given("a list of imports defined in imports.txt") {
         on("accessing imports") {
             val values = Synthetics.imports
@@ -17,7 +16,6 @@ class SyntheticTests: Spek({
             }
         }
     }
-
     given("a list of prefixes defined in prefixes.txt") {
         on("accessing prefixes") {
             val values = Synthetics.prefixes
@@ -27,8 +25,4 @@ class SyntheticTests: Spek({
             }
         }
     }
-
-
-
-
 })
