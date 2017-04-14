@@ -1,8 +1,5 @@
 package com.hadihariri.markcode
 
-import com.hadihariri.markcode.Chapter
-import com.hadihariri.markcode.KotlinLanguage
-import com.hadihariri.markcode.SourceMetadata
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter
@@ -76,11 +73,9 @@ fun extractChapterNumber(filename: String): Int {
     return 0
 }
 
-data class ExampleOutput(val functionName: String, val expectedOutputFile: String, val location: String)
-
 fun writeVerifyAllSamples(chapters: List<Chapter>, outputDir: File) {
     BufferedWriter(FileWriter(File(outputDir, "VerifyAllSamples.kt"))).use { outputFile ->
-        outputFile.write("import org.jetbrains.kotlinBook.OutputVerifier\n")
+        outputFile.write("import com.hadihariri.markcode\n")
 
         val examples = mutableListOf<ExampleOutput>()
 

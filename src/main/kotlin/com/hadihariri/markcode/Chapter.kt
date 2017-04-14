@@ -1,10 +1,8 @@
 package com.hadihariri.markcode
 
 
-import com.hadihariri.markcode.KotlinLanguage
 import java.io.File
-import java.util.ArrayList
-import java.util.LinkedHashMap
+import java.util.*
 
 class Chapter(val chapterFile: File, val chapterCodeDir: File) {
     val examples = LinkedHashMap<String, CodeExample>()
