@@ -1,41 +1,12 @@
 package org.jetbrains.kotlinBook.codegen
 
+import com.hadihariri.markcode.Synthetics.imports
+import com.hadihariri.markcode.Synthetics.prefixes
 import java.io.BufferedWriter
 import java.io.File
 import java.io.FileWriter
 import java.util.*
 
-val syntheticImports = mapOf(
-        "Comparator" to "java.util.Comparator",
-        "TreeMap" to "java.util.TreeMap",
-        "ArrayList" to "java.util.ArrayList",
-        "BufferedReader" to "java.io.BufferedReader",
-        "FileReader" to "java.io.FileReader",
-        "StringReader" to "java.io.StringReader",
-        "InputStreamReader" to "java.io.InputStreamReader",
-        "File" to "java.io.File",
-        "HashSet" to "java.util.HashSet",
-        "Date" to "java.util.Date",
-        "Collections" to "java.util.Collections",
-        "BigDecimal" to "java.math.BigDecimal",
-        "Serializable" to "java.io.Serializable",
-        "PropertyChangeSupport" to "java.beans.PropertyChangeSupport",
-        "PropertyChangeListener" to "java.beans.PropertyChangeListener",
-        "Delegates" to "kotlin.properties.Delegates",
-        "KClass" to "kotlin.reflect.KClass",
-        "KProperty" to "kotlin.reflect.KProperty",
-        "memberProperties" to "kotlin.reflect.memberProperties",
-        "compareValuesBy" to "kotlin.comparisons.compareValuesBy",
-        "@Before" to "org.junit.Before",
-        "@Test" to "org.junit.Test",
-        "Assert" to "org.junit.Assert",
-        "Period" to "java.time.Period",
-        "LocalDate" to "java.time.LocalDate"
-)
-
-val syntheticPrefixes = mapOf(
-        "getFacebookName" to "fun getFacebookName(accountId: Int) = \"fb:\$accountId\""
-)
 
 fun captionToFilename(caption: String, captionIndex: Int): String {
     val name = StringBuilder()
@@ -285,11 +256,11 @@ class CodeExample(val chapter: Chapter,
             }
 
             var anyPrefixes = false
-            for (prefix in collectSyntheticElements(syntheticImports)) {
+            for (prefix in collectSyntheticElements(imports)) {
                 append(language.formatImportStatement(prefix)).append("\n")
                 anyPrefixes = true
             }
-            for (prefix in collectSyntheticElements(syntheticPrefixes)) {
+            for (prefix in collectSyntheticElements(prefixes)) {
                 append(prefix).append("\n")
                 anyPrefixes = true
             }
@@ -511,24 +482,3 @@ fun writeVerifyAllSamples(chapters: List<Chapter>, outputDir: File) {
     }
 }
 
-fun main(args: Array<String>) {
-    if (args.size < 2) {
-        println("Usage: java -jar asciidoc-source-verifier.jar <book directory> <examples output directory> [-o]")
-        return
-    }
-
-    val writeExpectedOutput = args.size > 2 && args[2] == "-o"
-    val chapters = mutableListOf<Chapter>()
-    File(args[0]).listFiles { file, name -> name.endsWith(".adoc") }.forEach {
-        val chapterCodeDir = File(args[1], it.nameWithoutExtension )
-        val chapter = Chapter(it, chapterCodeDir)
-        chapters.add(chapter)
-        chapter.process(writeExpectedOutput)
-    }
-    if (writeExpectedOutput) {
-        writeVerifyAllSamples(chapters, File(args[1]))
-    }
-    if (chapters.any { it.hasErrors }) {
-        System.exit(1)
-    }
-}

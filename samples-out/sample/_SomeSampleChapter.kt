@@ -1,9 +1,13 @@
 package sample._SomeSampleChapter
 
+import java.util.ArrayList
+
 data class Person(val name: String,
                   val age: Int? = null)
 
 fun main(args: Array<String>) {
+    val otherPersons = ArrayList<String>()
+
     val persons = listOf(Person("Alice"),
                          Person("Bob", age = 29))
 
