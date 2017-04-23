@@ -11,6 +11,7 @@ write documentation for API's et al and it in some way helps make sure that the 
 * Add markdown support
 * Provide better command line runner
 
+Contributions welcome.
 
 ## Credits
 
