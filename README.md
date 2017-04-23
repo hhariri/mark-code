@@ -15,7 +15,7 @@ Contributions welcome.
 
 ## Credits
 
-Credits to [Dimitry Jemerov](https://twitter.com/intelliyole) for his work in this. Dmitry used the original code for the [Kotlin In Action](https://www.manning.com/books/kotlin-in-action) book.
+Credits to [Dimitry Jemerov](https://twitter.com/intelliyole) for his work in this. Dmitry wrote the original code for the [Kotlin In Action](https://www.manning.com/books/kotlin-in-action) book.
  
 
 
