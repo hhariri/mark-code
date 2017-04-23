@@ -52,7 +52,7 @@ class Chapter(val chapterFile: File, val chapterCodeDir: File) {
                     }
                     else if (line.startsWith("----")) {
                         val sourceMetadata = if (expectedExampleLineNumber == lineNumber)
-                            parseMetadata(sourceMetadataLine!!)
+                            DocMetadata().parse(sourceMetadataLine!!)
                         else
                             null
 

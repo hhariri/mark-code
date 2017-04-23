@@ -1,0 +1,5 @@
+```kotlin
+fun abc(): String {
+
+}
+```
