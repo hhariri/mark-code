@@ -1,9 +1,6 @@
 package com.hadihariri.markcode
 
-import com.hadihariri.markcode.Chapter
-import com.hadihariri.markcode.writeVerifyAllSamples
 import java.io.File
-
 
 fun main(args: Array<String>) {
     if (args.size < 2) {
