@@ -176,4 +176,8 @@ Copy the src/com/hadihariri/markcode/OutputVerifier.kt to your -o folder.
 Credits to [Dimitry Jemerov](https://twitter.com/intelliyole) for his work on this. Dmitry wrote the original code for the [Kotlin In Action](https://www.manning.com/books/kotlin-in-action) book.
  
 
+## License
+
+Project is Licensed under MIT (c) 2017 Hadi Hariri and Contributors
+
 
