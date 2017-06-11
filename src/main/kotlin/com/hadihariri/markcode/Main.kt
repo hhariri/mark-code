@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
 
     val writeExpectedOutput = args.size > 2 && args[2] == "-o"
     val chapters = mutableListOf<Chapter>()
-    File(args[0]).listFiles { file, name -> name.endsWith(".adoc") }.forEach {
+    File(args[0]).listFiles { _, name -> name.endsWith(".adoc") }.forEach {
         val chapterCodeDir = File(args[1], it.nameWithoutExtension )
         val chapter = Chapter(it, chapterCodeDir)
         chapters.add(chapter)
