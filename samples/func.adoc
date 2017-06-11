@@ -1,0 +1,9 @@
+== Hello World
+
+
+[source,kotlin]
+----
+fun sum(x: Int, y: Int) = x + y
+>>> sum(2,3)
+5
+----
