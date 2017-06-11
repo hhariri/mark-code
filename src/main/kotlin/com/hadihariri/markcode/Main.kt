@@ -4,7 +4,7 @@ import java.io.File
 
 fun main(args: Array<String>) {
     if (args.size < 2) {
-        println("Usage: java -jar asciidoc-source-verifier.jar <book directory> <examples output directory> [-o]")
+        println("Usage: <doc_directory> <examples output directory> [-o]")
         return
     }
 

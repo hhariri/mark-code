@@ -15,7 +15,16 @@ buildscript {
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
-mainClassName = 'com.hadihariri.markcode.Main'
+distZip {
+    into(project.name+"-"+project.version) {
+        from '.'
+        include 'imports.txt'
+        include 'prefixes.txt'
+    }
+}
+
+
+mainClassName = 'com.hadihariri.markcode.MainKt'
 
 repositories {
     mavenCentral()

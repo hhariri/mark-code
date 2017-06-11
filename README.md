@@ -9,10 +9,15 @@ write documentation for API's et al and it in some way helps make sure that the 
 * Continue code reorganisation and cleanup
 * Make it independent of concept of Chapters
 * Add markdown support
-* Provide better command line runner
 
 Contributions welcome.
 
+
+## To run
+
+Run the Gradle `distZip` task. Copy the output to your project folder (usually `tools`). Copy the
+imports.txt and prefixes.txt samples to your root folder and modify as needed.
+ 
 ## Credits
 
 Credits to [Dimitry Jemerov](https://twitter.com/intelliyole) for his work on this. Dmitry wrote the original code for the [Kotlin In Action](https://www.manning.com/books/kotlin-in-action) book.
