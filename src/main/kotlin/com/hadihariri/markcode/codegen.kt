@@ -56,7 +56,7 @@ fun writeVerifyAllSamples(chapters: List<Chapter>, outputDir: File) {
         outputFile.write("\n\nfun main(args: Array<String>) {\n")
         outputFile.write("    val verifier = OutputVerifier()\n")
         for ((function, expectedOutput, location) in examples) {
-            outputFile.write("    verifier.verifySample(::$function, \"$expectedOutput\", \"$location\")\n")
+            outputFile.write("    verifier.verifySample(::$function, \"$outputDir/$expectedOutput\", \"$location\")\n")
         }
         outputFile.write("    verifier.report()\n}\n")
     }
