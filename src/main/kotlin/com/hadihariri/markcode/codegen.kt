@@ -35,7 +35,7 @@ fun extractChapterNumber(filename: String): Int {
 
 fun writeVerifyAllSamples(chapters: List<Chapter>, outputDir: File) {
     BufferedWriter(FileWriter(File(outputDir, "VerifyAllSamples.kt"))).use { outputFile ->
-        outputFile.write("import com.hadihariri.markcode\n")
+        outputFile.write("import com.hadihariri.markcode.OutputVerifier\n")
 
         val examples = mutableListOf<ExampleOutput>()
 
