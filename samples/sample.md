@@ -1,5 +1,0 @@
-```kotlin
-fun abc(): String {
-
-}
-```
