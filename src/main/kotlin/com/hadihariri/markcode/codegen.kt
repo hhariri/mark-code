@@ -51,6 +51,8 @@ fun writeVerifyAllSamples(chapters: List<Chapter>, outputDir: File) {
             }
         }
 
+        // TODO - make this actually read the file so we don't have to keep in sync
+        // (distZip right now needs proper path for this so that's why hacked right now)
         outputFile.write("\n\nfun main(args: Array<String>) {\n")
         outputFile.write("    val verifier = OutputVerifier()\n")
         for ((function, expectedOutput, location) in examples) {

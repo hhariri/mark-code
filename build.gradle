@@ -20,6 +20,7 @@ distZip {
         from '.'
         include 'imports.txt'
         include 'prefixes.txt'
+        include 'src/main/kotlin/com/hadihariri/markcode/OutputVerifier.kt'
     }
 }
 

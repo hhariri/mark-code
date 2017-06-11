@@ -17,6 +17,7 @@ Contributions welcome.
 
 Run the Gradle `distZip` task. Copy the output to your project folder (usually `tools`). Copy the
 imports.txt and prefixes.txt samples to your root folder and modify as needed.
+Copy the src/com/hadihariri/markcode/OutputVerifier.kt to your -o folder. 
  
 ## Credits
 
