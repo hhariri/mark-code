@@ -13,6 +13,9 @@ buildscript {
 }
 
 apply plugin: 'kotlin'
+apply plugin: 'application'
+
+mainClassName = 'com.hadihariri.markcode.Main'
 
 repositories {
     mavenCentral()
