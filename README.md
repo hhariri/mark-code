@@ -28,6 +28,7 @@ Any source code you write will automatically be encapsulated in a `main` functio
 [source,kotlin]
 ----
 fun sum(x: Int, y: Int) = x + y
+sum(2,3)
 ----
 ```
 
