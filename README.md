@@ -153,7 +153,7 @@ To invoke the tool, use the following command:
 mark-code <sources> <output> -o
 ```  
 
-where <sources> is where your *.adoc (*.md not supported yet) are located, and <output> is where you want the code to be verified to be placed. The -o is optional and generates the
+where `<sources>` is where your *.adoc (*.md not supported yet) are located, and `<output>` is where you want the code to be verified to be placed. The -o is optional and generates the
 `VerifyAllSamples.kt` which actually executes the code to see if the output is as specified.
 
 ## TODO
