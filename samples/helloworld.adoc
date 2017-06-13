@@ -1,0 +1,11 @@
+== Hello World
+
+
+[source,kotlin]
+----
+fun sum(x: Int, y: Int) = x + y <1>
+>>> println(sum(2,3))
+5
+----
+<1> Single-expression functions do not need explicit return type defined
+

@@ -1,9 +1,9 @@
 import com.hadihariri.markcode.OutputVerifier
-import func.exkt.main as func_exkt
+import helloworld.exkt.main as helloworld_exkt
 
 
 fun main(args: Array<String>) {
     val verifier = OutputVerifier()
-    verifier.verifySample(::func_exkt, "samples-out/func/1_HelloWorld.txt", "func.adoc:8")
+    verifier.verifySample(::helloworld_exkt, "samples-out/helloworld/1_HelloWorld.txt", "helloworld.adoc:8")
     verifier.report()
 }

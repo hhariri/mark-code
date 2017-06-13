@@ -22,7 +22,8 @@ a Kotlin file for each individual snippet.
 
 ### Source code
 
-Any source code you write will automatically be encapsulated in a `main` function (except of course the `main` function). In other words
+Any source code you write will automatically generate a corresponding valid Kotlin file which can then be checked for compilation errors
+
 
 ```asciidoc
 [source,kotlin]
@@ -35,13 +36,9 @@ would generate
 
 ```kotlin
 fun sum(x: Int, y: Int) = x + y
-
-fun main(args: Array<String>) {
-    sum(2,3)
-}
 ```
 
-whereas 
+and 
 
 ```asciidoc
 [source,kotlin]
@@ -134,7 +131,8 @@ fun sum(x: Int, y: Int) = x + y
 9
 ```
 
-What you want executed you prefix with `>>>` and on the next line you put the result
+What you want executed you prefix with `>>>` and on the next line you put the result. The `>>>` will automatically generate a `main` function. 
+
 
 ## How to use it
 
