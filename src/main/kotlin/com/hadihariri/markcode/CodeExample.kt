@@ -77,12 +77,12 @@ class CodeExample(val chapter: Chapter,
         val processedLine: String
         if (matchResult != null) {
             val lineBeforeAnno = line.substring(0, matchResult.range.start).trimEnd()
-            if (lineBeforeAnno.length > 55) {
+            if (lineBeforeAnno.length > 150) {
                 reportLineError(lineNumber, "Code line before annotation is too long (55 characters max)")
             }
             processedLine = lineBeforeAnno
         } else {
-            if (line.trimEnd().length > 76) {
+            if (line.trimEnd().length > 175) {
                 reportLineError(lineNumber, "Code line is too long (76 characters max)")
             }
             processedLine = line.trimEnd()
